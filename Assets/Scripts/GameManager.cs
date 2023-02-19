@@ -28,6 +28,17 @@ public class GameManager : MonoBehaviour
 
     private float _timeLeft = 55f; // time left seconds.
 
+    private void Awake()
+    {
+#if LOW_QUALITY
+        Debug.Log("Running in low quality mode...");
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 30;
+#else
+        Debug.Log("Running in high quality mode...");
+#endif
+    }
+
     void Update()
     {
         // Abyss trigger should be always under player.
@@ -51,7 +62,7 @@ public class GameManager : MonoBehaviour
         if(_timeLeft <= 0)
         {
             _timeLeft = 0;
-            EndGame("Player went through this test.");
+            EndGame("Player went through.");
         }
     }
 
