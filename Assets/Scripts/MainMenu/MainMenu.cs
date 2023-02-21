@@ -23,7 +23,7 @@ public class MainMenu : MonoBehaviour
         Logger.Log("Exiting the game...");
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
-#else
+#elif !UNITY_EDITOR && UNITY_STANDALONE
         Application.Quit();
 #endif
     }
