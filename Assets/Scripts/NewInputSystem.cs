@@ -48,15 +48,27 @@ public class NewInputSystem : Player
         }
     }
 
+    private void OnQuit(CallbackContext context)
+    {
+        Logger.Log("Exiting the game (escape pressed).");
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#elif !UNITY_EDITOR && UNITY_STANDALONE
+        Application.Quit();
+#endif
+    }
+
     private void OnEnable()
     {
         Controls.ActionMap.Enable();
         Controls.ActionMap.Jump.performed += OnJump;
+        Controls.ActionMap.Quit.performed += OnQuit;
     }
 
     private void OnDisable()
     {
         Controls.ActionMap.Jump.performed -= OnJump;
+        Controls.ActionMap.Quit.performed -= OnQuit;
         Controls.ActionMap.Disable();
     }
 

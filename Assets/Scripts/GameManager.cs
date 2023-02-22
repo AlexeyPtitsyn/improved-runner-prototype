@@ -34,10 +34,10 @@ public class GameManager : MonoBehaviour
         Common.ValidateObject<GameObject>(Abyss, "Abyss");
         Common.ValidateObject<GameObject>(BlinkerLeft, "BlinkerLeft");
         Common.ValidateObject<GameObject>(BlinkerRight, "BlinkerRight");
-        Common.ValidateObject<GameObject>(TextLives, "TextLives");
-        Common.ValidateObject<GameObject>(TextScore, "TextScore");
-        Common.ValidateObject<GameObject>(TextCountdown, "TextCountdown");
-        Common.ValidateObject<GameObject>(TextPS, "TextPS");
+        Common.ValidateObject<Text>(TextLives, "TextLives");
+        Common.ValidateObject<Text>(TextScore, "TextScore");
+        Common.ValidateObject<Text>(TextCountdown, "TextCountdown");
+        Common.ValidateObject<Text>(TextPS, "TextPS");
     }
 
     private void Awake()
@@ -46,10 +46,10 @@ public class GameManager : MonoBehaviour
         Common.ValidateObject<GameObject>(Abyss, "Abyss", true);
         Common.ValidateObject<GameObject>(BlinkerLeft, "BlinkerLeft", true);
         Common.ValidateObject<GameObject>(BlinkerRight, "BlinkerRight", true);
-        Common.ValidateObject<GameObject>(TextLives, "TextLives", true);
-        Common.ValidateObject<GameObject>(TextScore, "TextScore", true);
-        Common.ValidateObject<GameObject>(TextCountdown, "TextCountdown", true);
-        Common.ValidateObject<GameObject>(TextPS, "TextPS", true);
+        Common.ValidateObject<Text>(TextLives, "TextLives", true);
+        Common.ValidateObject<Text>(TextScore, "TextScore", true);
+        Common.ValidateObject<Text>(TextCountdown, "TextCountdown", true);
+        Common.ValidateObject<Text>(TextPS, "TextPS", true);
 #if LOW_QUALITY
         Logger.Log("Running in low quality mode...");
         // Decrease frame rate for my laptop while development:
