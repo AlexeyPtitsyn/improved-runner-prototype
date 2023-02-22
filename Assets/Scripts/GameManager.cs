@@ -28,11 +28,31 @@ public class GameManager : MonoBehaviour
 
     private float _timeLeft = 55f; // time left seconds.
 
+    private void OnDrawGizmos()
+    {
+        Common.ValidateObject<GameObject>(Player, "Player");
+        Common.ValidateObject<GameObject>(Abyss, "Abyss");
+        Common.ValidateObject<GameObject>(BlinkerLeft, "BlinkerLeft");
+        Common.ValidateObject<GameObject>(BlinkerRight, "BlinkerRight");
+        Common.ValidateObject<GameObject>(TextLives, "TextLives");
+        Common.ValidateObject<GameObject>(TextScore, "TextScore");
+        Common.ValidateObject<GameObject>(TextCountdown, "TextCountdown");
+        Common.ValidateObject<GameObject>(TextPS, "TextPS");
+    }
+
     private void Awake()
     {
+        Common.ValidateObject<GameObject>(Player, "Player", true);
+        Common.ValidateObject<GameObject>(Abyss, "Abyss", true);
+        Common.ValidateObject<GameObject>(BlinkerLeft, "BlinkerLeft", true);
+        Common.ValidateObject<GameObject>(BlinkerRight, "BlinkerRight", true);
+        Common.ValidateObject<GameObject>(TextLives, "TextLives", true);
+        Common.ValidateObject<GameObject>(TextScore, "TextScore", true);
+        Common.ValidateObject<GameObject>(TextCountdown, "TextCountdown", true);
+        Common.ValidateObject<GameObject>(TextPS, "TextPS", true);
 #if LOW_QUALITY
         Logger.Log("Running in low quality mode...");
-        // Decrese frame rate for my laptop while development:
+        // Decrease frame rate for my laptop while development:
         QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = 30;
 #else

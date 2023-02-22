@@ -16,4 +16,16 @@ public class PlayerSettings : MonoBehaviour
 
     [SerializeField, Range(300, 500)]
     public float JumpForce = 400;
+
+    private void OnDrawGizmos()
+    {
+        Common.ValidateObject<GameObject>(HisShip, "HisShip");
+        Common.ValidateObject<GameObject>(MainObject, "MainObject");
+    }
+
+    private void Awake()
+    {
+        Common.ValidateObject<GameObject>(HisShip, "HisShip", true);
+        Common.ValidateObject<GameObject>(MainObject, "MainObject", true);
+    }
 }

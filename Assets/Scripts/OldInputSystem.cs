@@ -1,5 +1,6 @@
 ﻿/**
  * Good-old input system.
+ * TODO: remove this.
  */
 using System.Collections;
 using UnityEngine;

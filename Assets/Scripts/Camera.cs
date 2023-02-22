@@ -8,6 +8,16 @@ public class Camera : MonoBehaviour
     public Transform target;
     public float distance = 3.0f;
 
+    private void OnDrawGizmos()
+    {
+        Common.ValidateObject<Transform>(target, "target");
+    }
+
+    private void Awake()
+    {
+        Common.ValidateObject<Transform>(target, "target", true);
+    }
+
     void Update()
     {
         float x = transform.position.x;
