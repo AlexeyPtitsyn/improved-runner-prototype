@@ -4,15 +4,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using static UnityEngine.InputSystem.InputAction;
 
 public class NewInputSystem : Player
 {
-    public InputActions Controls;
+    public InputActions ProductionControls;
+    public EditorControls DevelopmentControls;
 
     protected void Awake()
     {
-        Controls = new InputActions();
+        DevelopmentControls = new EditorControls();
+        ProductionControls = new InputActions();
     }
 
     protected override void Start()
@@ -26,7 +29,12 @@ public class NewInputSystem : Player
     {
         while(true)
         {
-            var moveAxis = Controls.ActionMap.Move.ReadValue<float>();
+#if UNITY_EDITOR
+            var moveAxis = DevelopmentControls.ActionMap.Move.ReadValue<float>();
+#elif !UNITY_EDITOR && UNITY_STANDALONE
+            var moveAxis = ProductionControls.ActionMap.Move.ReadValue<float>();
+#endif
+
             int horRounded = (int)Mathf.Round(moveAxis);
             _hisShip.Roll(horRounded);
 
@@ -41,6 +49,7 @@ public class NewInputSystem : Player
 
     private void OnJump(CallbackContext context)
     {
+        Logger.Log("Jump pressed.");
         if (!_inAir)
         {
             _inAir = true;
@@ -60,16 +69,29 @@ public class NewInputSystem : Player
 
     private void OnEnable()
     {
-        Controls.ActionMap.Enable();
-        Controls.ActionMap.Jump.performed += OnJump;
-        Controls.ActionMap.Quit.performed += OnQuit;
+#if UNITY_EDITOR
+        DevelopmentControls.ActionMap.Enable();
+        DevelopmentControls.ActionMap.Jump.performed += OnJump;
+        DevelopmentControls.ActionMap.Quit.performed += OnQuit;
+#elif !UNITY_EDITOR && UNITY_STANDALONE
+        ProductionControls.ActionMap.Enable();
+        ProductionControls.ActionMap.Jump.performed += OnJump;
+        ProductionControls.ActionMap.Quit.performed += OnQuit;
+#endif
+
     }
 
     private void OnDisable()
     {
-        Controls.ActionMap.Jump.performed -= OnJump;
-        Controls.ActionMap.Quit.performed -= OnQuit;
-        Controls.ActionMap.Disable();
+#if UNITY_EDITOR
+        DevelopmentControls.ActionMap.Jump.performed -= OnJump;
+        DevelopmentControls.ActionMap.Quit.performed -= OnQuit;
+        DevelopmentControls.ActionMap.Disable();
+#elif !UNITY_EDITOR && UNITY_STANDALONE
+        ProductionControls.ActionMap.Jump.performed -= OnJump;
+        ProductionControls.ActionMap.Quit.performed -= OnQuit;
+        ProductionControls.ActionMap.Disable();
+#endif
     }
 
 }

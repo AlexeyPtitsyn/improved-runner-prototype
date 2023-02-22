@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/Input/InputActions.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/Input/EditorControls.inputactions'
 
 using System;
 using System.Collections;
@@ -6,22 +6,22 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 
-public class @InputActions : IInputActionCollection, IDisposable
+public class @EditorControls : IInputActionCollection, IDisposable
 {
     public InputActionAsset asset { get; }
-    public @InputActions()
+    public @EditorControls()
     {
         asset = InputActionAsset.FromJson(@"{
-    ""name"": ""InputActions"",
+    ""name"": ""EditorControls"",
     ""maps"": [
         {
             ""name"": ""ActionMap"",
-            ""id"": ""04ec94a9-6dee-4dcc-ac7b-973264e69c16"",
+            ""id"": ""02eb46b2-493c-48ca-9444-62c569987388"",
             ""actions"": [
                 {
                     ""name"": ""Jump"",
                     ""type"": ""Button"",
-                    ""id"": ""2493f36d-7383-4413-9d21-37294ec19caf"",
+                    ""id"": ""de1fdc09-6fc8-49d5-b716-f5c784019119"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -29,7 +29,7 @@ public class @InputActions : IInputActionCollection, IDisposable
                 {
                     ""name"": ""Move"",
                     ""type"": ""Value"",
-                    ""id"": ""49eeae6d-6750-41d6-8963-9f5d06c829a7"",
+                    ""id"": ""50de94c9-e811-4204-a58b-c4c1f7d5d399"",
                     ""expectedControlType"": ""Axis"",
                     ""processors"": """",
                     ""interactions"": ""Hold""
@@ -37,7 +37,7 @@ public class @InputActions : IInputActionCollection, IDisposable
                 {
                     ""name"": ""Quit"",
                     ""type"": ""Button"",
-                    ""id"": ""16bb34b3-7fab-4468-8179-bc739d6099a1"",
+                    ""id"": ""774d7439-6cf9-4996-ae62-58144517e865"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -46,7 +46,7 @@ public class @InputActions : IInputActionCollection, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""b7e8fa5c-cd72-4239-bc43-311c490c4374"",
+                    ""id"": ""5e69efd8-596a-4ca0-8a93-0f3ac59ad838"",
                     ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -57,7 +57,7 @@ public class @InputActions : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""1D Axis"",
-                    ""id"": ""c9ffd3d5-5ffb-4518-a088-34c1e417baa0"",
+                    ""id"": ""09a4e2e8-9509-4c84-afec-7edefbd1f470"",
                     ""path"": ""1DAxis"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -68,8 +68,8 @@ public class @InputActions : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""negative"",
-                    ""id"": ""f513214d-358c-44bc-aa4a-986c5caef958"",
-                    ""path"": ""<Keyboard>/a"",
+                    ""id"": ""b2bfd565-a3d9-42a2-85f1-d331bb511763"",
+                    ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -79,8 +79,8 @@ public class @InputActions : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""positive"",
-                    ""id"": ""fa2516b7-dd74-4be7-9373-2d14721445f9"",
-                    ""path"": ""<Keyboard>/d"",
+                    ""id"": ""2de789ec-5cf4-46c7-ac92-2ced7bcf1113"",
+                    ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -90,7 +90,7 @@ public class @InputActions : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""8033e2af-f381-494f-8e37-55215296f8eb"",
+                    ""id"": ""f2207c31-633f-4820-9ea1-023449e3e721"",
                     ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -163,8 +163,8 @@ public class @InputActions : IInputActionCollection, IDisposable
     private readonly InputAction m_ActionMap_Quit;
     public struct ActionMapActions
     {
-        private @InputActions m_Wrapper;
-        public ActionMapActions(@InputActions wrapper) { m_Wrapper = wrapper; }
+        private @EditorControls m_Wrapper;
+        public ActionMapActions(@EditorControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Jump => m_Wrapper.m_ActionMap_Jump;
         public InputAction @Move => m_Wrapper.m_ActionMap_Move;
         public InputAction @Quit => m_Wrapper.m_ActionMap_Quit;
