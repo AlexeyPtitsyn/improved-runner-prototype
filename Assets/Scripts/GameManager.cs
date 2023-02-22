@@ -31,11 +31,12 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
 #if LOW_QUALITY
-        Debug.Log("Running in low quality mode...");
+        Logger.Log("Running in low quality mode...");
+        // Decrese frame rate for my laptop while development:
         QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = 30;
 #else
-        Debug.Log("Running in high quality mode...");
+        Logger.Log("Running in high quality mode...");
 #endif
     }
 
@@ -99,8 +100,13 @@ public class GameManager : MonoBehaviour
      */
     public void EndGame(string message)
     {
+        Logger.Log(message);
         TextPS.text = message;
+#if UNITY_EDITOR
         EditorApplication.isPaused = true;
+#elif !UNITY_EDITOR && UNITY_STANDALONE
+        Application.Quit();
+#endif
     }
 
     /**

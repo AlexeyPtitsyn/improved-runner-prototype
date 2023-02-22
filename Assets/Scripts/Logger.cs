@@ -2,6 +2,9 @@
 using System.IO;
 using UnityEngine;
 
+/**
+ * Improved logger.
+ */
 public static class Logger
 {
     public static void Log(string str)
