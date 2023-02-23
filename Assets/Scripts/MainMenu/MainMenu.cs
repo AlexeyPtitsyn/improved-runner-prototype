@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿// Main menu controller.
+// Copyright Alexey Ptitsyn <alexey.ptitsyn@gmail.com>, 2023
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour

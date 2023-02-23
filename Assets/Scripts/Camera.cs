@@ -1,6 +1,5 @@
-﻿/**
- * Camera should follow Z-coord. Not the player.
- */
+﻿// Camera that always follow the player.
+// Copyright Alexey Ptitsyn <alexey.ptitsyn@gmail.com>, 2023
 using UnityEngine;
 
 public class Camera : MonoBehaviour

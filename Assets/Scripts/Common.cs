@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿// Shared functions.
+// Copyright Alexey Ptitsyn <alexey.ptitsyn@gmail.com>, 2023
+using UnityEngine;
 
 public static class Common
 {

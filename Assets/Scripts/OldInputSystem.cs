@@ -1,7 +1,7 @@
-﻿/**
- * Good-old input system.
- * TODO: remove this.
- */
+﻿// Old input system.
+// TODO: remove this.
+// Copyright Alexey Ptitsyn <alexey.ptitsyn@gmail.com>, 2023
+
 using System.Collections;
 using UnityEngine;
 

@@ -1,7 +1,5 @@
-﻿/**
- * Player game world interaction.
- */
-
+﻿// Player game world interaction.
+// Copyright Alexey Ptitsyn <alexey.ptitsyn@gmail.com>, 2023
 using System.Collections;
 using UnityEngine;
 

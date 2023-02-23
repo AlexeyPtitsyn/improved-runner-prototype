@@ -1,6 +1,5 @@
-﻿/**
- * New input system.
- */
+﻿// New input system.
+// Copyright Alexey Ptitsyn <alexey.ptitsyn@gmail.com>, 2023
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

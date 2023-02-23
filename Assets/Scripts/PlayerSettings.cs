@@ -1,6 +1,5 @@
-﻿/**
- * Just for settings.
- */
+﻿// Player settings.
+// Copyright Alexey Ptitsyn <alexey.ptitsyn@gmail.com>, 2023
 using UnityEngine;
 
 public class PlayerSettings : MonoBehaviour

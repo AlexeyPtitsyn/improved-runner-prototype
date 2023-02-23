@@ -1,7 +1,5 @@
-﻿/**
- * Player model animation.
- * 
- */
+﻿// Player model animations.
+// Copyright Alexey Ptitsyn <alexey.ptitsyn@gmail.com>, 2023
 using System.Collections;
 using UnityEngine;
 

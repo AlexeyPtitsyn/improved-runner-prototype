@@ -1,10 +1,9 @@
-﻿using System;
+﻿// Improved logger.
+// Copyright Alexey Ptitsyn <alexey.ptitsyn@gmail.com>, 2023
+using System;
 using System.IO;
 using UnityEngine;
 
-/**
- * Improved logger.
- */
 public static class Logger
 {
     public static void Log(string str)

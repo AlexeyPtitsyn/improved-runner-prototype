@@ -1,6 +1,5 @@
-﻿/**
- * Main world object.
- */
+﻿// Main level object.
+// Copyright Alexey Ptitsyn <alexey.ptitsyn@gmail.com>, 2023
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
@@ -26,7 +25,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Transform[] _tiles = new Transform[10];
 
-    private float _timeLeft = 55f; // time left seconds.
+    private float _timeLeft = 55f; // time left in seconds.
 
     private void OnDrawGizmos()
     {
@@ -116,7 +115,7 @@ public class GameManager : MonoBehaviour
     }
 
     /**
-     * Fired on game end (due to player's death).
+     * Fired on the game end (due to player's death).
      */
     public void EndGame(string message)
     {
