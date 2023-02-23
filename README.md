@@ -11,5 +11,7 @@ Since this is a prototype, it will not include sounds, textures and so on. ...ho
 - Input System package version: 1.0.2.
 
 ## Controls
-- `WSAD` - move player.
+- `WSAD` - move player (PC build version), Arrows - Editor version.
+- `Esc` - Quit.
+- `Space` - Jump.
 
